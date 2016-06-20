@@ -85,7 +85,6 @@ ui_print "          ( ꒪Д꒪)ノ( ꒪Д꒪)ノ"
 ui_print " "
 ui_print " "
 
-MD5_CHECK
 ROM_CHECK
 
 # ramdisk
@@ -125,6 +124,8 @@ chmod +x /tmp/tools/*
 
 mkdir /tmp/boot;
 
+MD5_CHECK
+
 ui_print "Build kernel.";
 ui_print " ";
 base=0x00000000
@@ -146,7 +147,6 @@ ui_print "Flash kernel.";
 ui_print " ";
 
 KERNEL_BUMP /tmp/boot/boot.img
-ui_print " ";
 dd if=/tmp/boot/boot.img of=${BOOT_PATH}
 
 ui_print "Run JZ tweak script";
