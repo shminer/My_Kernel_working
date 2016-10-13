@@ -133,11 +133,7 @@ kernel_addr=0x00008000
 ramdisk_addr=0x02000000
 target_addr=0x00000100
 page_size=4096
-if [ "${ROM}" = "LG" ]; then
-	cmdline="console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 user_debug=31 dwc3_msm.cpu_to_affin=1 androidboot.hardware=tiger6 androidboot.selinux=permissive lpm_levels.sleep_disabled=1"
-else
-	cmdline="console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 user_debug=31 dwc3_msm.cpu_to_affin=1 androidboot.hardware=tiger6 androidboot.selinux=disabled lpm_levels.sleep_disabled=1"
-fi
+cmdline="console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 user_debug=31 dwc3_msm.cpu_to_affin=1 androidboot.hardware=tiger6 androidboot.selinux=permissive lpm_levels.sleep_disabled=1"
 
 chmod +x /tmp/tools/mk
 
